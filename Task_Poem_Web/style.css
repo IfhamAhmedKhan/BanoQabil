@@ -1,12 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(https://static.bimago.pl/mediacache/catalog/product/cache/8/6/144668/image/750x1120/3d17a1473cdc9c51572c06033771cfe8/144668_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
     background-color: #333;
     color: #fff;
+    padding: 10px;
+    text-align: center;
 }
 
 #nav {
@@ -33,10 +40,13 @@ nav {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 main {
+    flex: 1;
     padding: 20px;
+    color: white;
 }
 
 .poem-container {
@@ -57,3 +67,25 @@ main {
     font-weight: bold;
 }
 
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+a:visited {
+    color: aqua;
+}
+
+a:hover {
+    color: #0036e6;
+}
+
+a {
+    color: aqua;
+}
+
+p {
+    color: #000000;
+}
