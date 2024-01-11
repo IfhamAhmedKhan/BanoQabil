@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input:focus:invalid {
+            border: 2px solid red;
+        }
+
+        output {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav></nav>
+    <header></header>
+    <main>
+        <h1>Sign up</h1>
+        <form>
+            <div>
+                <label for="booking_date">Booking Date</label>
+                <input type="date" id="booking_date" name="booking_date">
+            </div>
+            <div>
+                <label for="booking_people">Number of people</label>
+                <input type="range" id="booking_people" name="booking_people" min="1" max="10" value="4"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>4</output>
+            </div>
+            <label for="booking_location">Booking Location</label>
+            <input id="booking_location" name="booking_location" list="locations">
+            <datalist id="locations">
+                <option value="Downtown"></option>
+                <option value="Uptown"></option>
+            </datalist>
+            <div>
+                <label for="user_first_name">First Name: </label><br>
+                <input type="text" id="user_first_name" name="user_first_name" required minlength="3" maxlength="10">
+            </div>
+            <div>
+                <label for="user_last_name">Last Name: </label><br>
+                <input type="text" id="user_last_name" name="user_last_name" required minlength="3" maxlength="10">
+            </div>
+            <div>
+                <label for="user_email">Email: </label><br>
+                <input type="email" id="user_email" name="user_email" required>
+            </div>
+            <div>
+                <label for="user_password">Password: </label><br>
+                <input type="password" id="user_password" name="user_password" required minlength="8" maxlength="15">
+            </div>
+            <div>
+                <label for="user_confirm_pass">Confirm Password: </label><br>
+                <input type="password" id="user_confirm_pass" name="user_confirm_pass" required minlength="8"
+                    maxlength="15">
+            </div>
+            <div>
+                <label for="user_phone">Phone: </label><br>
+                <input type="tel" id="user_phone" name="user_phone" pattern="03[0-9]{9}" required>
+            </div>
+            <fieldset id="table">
+                <legend>Table selection</legend>
+                <label>
+                    <input type="radio" value="2" name="table">2-person table
+                </label>
+                <label>
+                    <input type="radio" value="4" name="table" checked>4-person table
+                </label>
+                <label>
+                    <input type="radio" value="6" name="table">6-person table
+                </label>
+            </fieldset>
+            <fieldset id="location">
+                <legend>Location</legend>
+                <label>
+                    <input type="radio" value="indoors" name="location">Indoors
+                </label>
+                <label>
+                    <input type="radio" value="outdoors" name="location">Outdoors
+                </label>
+            </fieldset>
+            <br>
+            <div>
+                <button type="submit">Sign up</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
