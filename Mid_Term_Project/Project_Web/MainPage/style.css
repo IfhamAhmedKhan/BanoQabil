@@ -9,6 +9,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(92, 89, 89, 0.8); 
+    border-radius: 10px;
+            
 }
 
 header {
@@ -55,3 +58,6 @@ nav {
     text-align: center;
     margin: 20px 0;
 }
+
+
+

@@ -6,31 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Ifterious Web</title>
+    <style>
+        button {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 2px;
+            width: 150px;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            color: white;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .game {
+            margin-top: 10px;
+        }
+
+        .game img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 
-<body style="background-image: url(https://cutewallpaper.org/21/hd-website-backgrounds/Best-46-HD-Webpage-Backgrounds-on-HipWallpaper-HD-.gif); background-size: cover; background-position: center;">
-    <div class="container">
-        <header>
-            <h1 class="logo">Ifterious home</h1>
-        </header>
-<br>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="MainPage.html">Home</a></li>
-                <li><a href="Videos.html">Videos</a></li>
-                <li><a href="https://www.youtube.com/@iftantarylive7083" target="_blank">Channels</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="/Mid_Term_Project/Project_Web/Login.html">Logout</a></li>
-            </ul>
-        </nav>
+<body>
 
+    <header>
+        <h1 class="logo">Ifterious home</h1>
+    </header>
+    <br>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="https://www.youtube.com/@iftantarylive7083" target="_blank">Channels</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="/Mid_Term_Project/Project_Web/Login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <br><br>
+    <hr>
+    <div class="container">
         <section class="main-content">
-        
+            <h1 class="logo"><u>Famous games</u></h1>
+            <div class="game-container">
+                <div class="game">
+                    <p>Gta 5</p>
+                    <img src="https://i.pinimg.com/originals/0b/07/14/0b0714cfb3ad2ba9960f4b38b37a9de1.jpg"
+                        alt="Gta 5"><br>
+                    <button style="background-color:gray"><a class="a1"
+                            href="https://www.rockstargames.com/gta-v">Download</a></button>
+                </div>
+                <div class="game">
+                    <p>Pubg Pc</p>
+                    <img src="https://cdn-wp.thesportsrush.com/2020/08/pubg-helmet-girl-4k-2020-qa-3840x2160-1.jpg"
+                        alt="Pubg Pc"><br>
+                    <button style="background-color:gray"><a class="a1"
+                            href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/">Download</a></button>
+                </div>
+                <div class="game">
+                    <p>Minecraft</p>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/510KWdgceEL.jpg" alt="Minecraft"><br>
+                    <button style="background-color:gray"><a class="a1"
+                            href="https://www.minecraft.net/en-us/download">Download</a></button>
+                </div>
+            </div>
         </section>
 
-       <footer>
+        <footer>
 
-       </footer>
+        </footer>
     </div>
 </body>
 
