@@ -64,7 +64,7 @@ legend {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #ffffff;
     color: white;
     cursor: pointer;
 }
@@ -84,3 +84,4 @@ a:hover {
 a {
     color: rgb(0, 152, 199);
 }
+
