@@ -4,43 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>LoginPage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1 style="color: aqua;">Welcome to Ifterious</h1>
+        <h1>Welcome to Ifterious</h1>
     </header>
     <main>
-        <h1>Sign up</h1>
-        <form action="Login.html">
-            <div>
-                <label for="user_name">Username</label>
-                <input type="text" minlength="4" maxlength="10" required>
-            </div>
-            <div>
-                <label for="user_age">Age</label>
-                <input type="range" id="booking_people" name="user_age" min="3" max="100" value="3"
-                    oninput="this.nextElementSibling.value = this.value">
-                <output>3</output>
-            </div>
-            <label for="user_location">Country</label>
-            <input id="user_location" name="user_location" list="locations">
-            <datalist id="locations">
-                <option value="Pakistan"></option>
-                <option value="New zealand"></option>
-                <option value="Germany"></option>
-                <option value="Egypt"></option>
-            </datalist>
-            <div>
-                <label for="user_first_name">First Name: </label><br>
-                <input type="text" id="user_first_name" name="user_first_name" required minlength="3" maxlength="10">
-            </div>
-            <div>
-                <label for="user_last_name">Last Name: </label><br>
-                <input type="text" id="user_last_name" name="user_last_name" required minlength="3" maxlength="10">
-            </div>
+        <h1>Login</h1>
+        <form action="MainPage/MainPage.html">
             <div>
                 <label for="user_email">Email: </label><br>
                 <input type="email" id="user_email" name="user_email" required>
@@ -50,27 +24,10 @@
                 <input type="password" id="user_password" name="user_password" required minlength="8" maxlength="15">
             </div>
             <div>
-                <label for="user_confirm_pass">Confirm Password: </label><br>
-                <input type="password" id="user_confirm_pass" name="user_confirm_pass" required minlength="8"
-                    maxlength="15">
+                <p>Don't have an account? <a href="Signup.html">Sign up</a></p>
             </div>
             <div>
-                <label for="user_phone">Phone: </label><br>
-                <input type="tel" id="user_phone" name="user_phone" pattern="03[0-9]{9}" required>
-            </div>
-            <fieldset id="location">
-                <legend>Term's and Condition</legend>
-                <div>
-                    <input type="checkbox" id="user_terms" required>
-                    <label for="user_terms" style="color: white;">Yes, I Agree to the terms and condition</label>
-                </div>
-            </fieldset>
-            <br>
-            <div>
-                <p>Already have an account? <a href="Login.html">Log in</a></p>
-            </div>
-            <div>
-                <button type="submit">Sign up</button>
+                <button type="submit">Login</button>
             </div>
         </form>
     </main>

@@ -19,7 +19,13 @@ main {
 
 h1 {
     text-align: center;
-    color: #333;
+    font-size: 50px;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #f33100 45%, #1000f0);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
 }
 
 form {
@@ -65,12 +71,13 @@ legend {
 
 button {
     background-color: #ffffff;
-    color: white;
+    background-color: #fc4343;
     cursor: pointer;
+    border-radius: 25%;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #fc0800;
 }
 
 #user_terms {
