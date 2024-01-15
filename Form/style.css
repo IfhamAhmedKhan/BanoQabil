@@ -1,0 +1,68 @@
+/* Default styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Media query for screens with a minimum width of 600px */
+  @media only screen and (min-width: 600px) {
+    main {
+      padding: 40px;
+    }
+  }
+  
+  /* Media query for screens with a minimum width of 768px */
+  @media only screen and (min-width: 768px) {
+    main {
+      max-width: 800px;
+    }
+  }
+  
+  /* Add more media queries as needed for larger screens */
+  
+  /* Additional styling for the form elements */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
