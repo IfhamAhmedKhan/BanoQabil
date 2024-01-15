@@ -7,21 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 
 <body>
+    <br>
     <header>
-        <h1>Welcome to Ifterious</h1>
+        <h1 class="animate__animated animate__bounce">Welcome to Ifterious</h1>
     </header>
-    <main>
-        <h1>Sign up</h1>
+    <main class="animate__animated animate__pulse">
+        <h1 class="animate__animated animate__fadeInLeft">Sign up</h1>
         <form action="index.html">
             <div>
-                <label for="user_name">Username</label>
+                <label for="user_name" class="animate__animated animate__fadeInLeft">Username</label>
                 <input type="text" minlength="4" maxlength="10" required>
             </div>
             <div>
-                <label for="user_age">Age</label>
+                <label for="user_age" class="animate__animated animate__fadeInLeft">Age</label>
                 <input type="range" id="booking_people" name="user_age" min="3" max="100" value="3"
                     oninput="this.nextElementSibling.value = this.value">
                 <output>3</output>
@@ -38,35 +43,35 @@
                 <option value="Iraq"></option>
             </datalist>
             <div>
-                <label for="user_first_name">First Name: </label><br>
+                <label for="user_first_name" class="animate__animated animate__fadeInLeft">First Name: </label><br>
                 <input type="text" id="user_first_name" name="user_first_name" required minlength="3" maxlength="10">
             </div>
             <div>
-                <label for="user_last_name">Last Name: </label><br>
+                <label for="user_last_name" class="animate__animated animate__fadeInLeft">Last Name: </label><br>
                 <input type="text" id="user_last_name" name="user_last_name" required minlength="3" maxlength="10">
             </div>
             <div>
-                <label for="user_email">Email: </label><br>
+                <label for="user_email" class="animate__animated animate__fadeInLeft">Email: </label><br>
                 <input type="email" id="user_email" name="user_email" required>
             </div>
             <div>
-                <label for="user_password">Password: </label><br>
+                <label for="user_password" class="animate__animated animate__fadeInLeft">Password: </label><br>
                 <input type="password" id="user_password" name="user_password" required minlength="8" maxlength="15">
             </div>
             <div>
-                <label for="user_confirm_pass">Confirm Password: </label><br>
+                <label for="user_confirm_pass" class="animate__animated animate__fadeInLeft">Confirm Password: </label><br>
                 <input type="password" id="user_confirm_pass" name="user_confirm_pass" required minlength="8"
                     maxlength="15">
             </div>
             <div>
-                <label for="user_phone">Phone: </label><br>
+                <label for="user_phone" class="animate__animated animate__fadeInLeft">Phone: </label><br>
                 <input type="tel" id="user_phone" name="user_phone" pattern="03[0-9]{9}" required>
             </div>
             <fieldset id="location">
-                <legend>Term's and Condition</legend>
+                <legend class="animate__animated animate__fadeInLeft">Term's and Condition</legend>
                 <div>
                     <input type="checkbox" id="user_terms" required>
-                    <label for="user_terms" style="color: white;">Yes, I Agree to the terms and condition</label>
+                    <label for="user_terms" style="color: white;" class="animate__animated animate__fadeInLeft">Yes, I Agree to the terms and condition</label>
                 </div>
             </fieldset>
             <br>

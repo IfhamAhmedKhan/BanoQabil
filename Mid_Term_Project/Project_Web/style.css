@@ -20,12 +20,11 @@ main {
 h1 {
     text-align: center;
     font-size: 50px;
-  font-weight: 600;
-  background-image: linear-gradient(to right, #f33100 45%, #1000f0);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
+    font-weight: 600;
+    background-image: linear-gradient(to right, #f33100 45%, #1000f0);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 form {
@@ -92,3 +91,18 @@ a {
     color: rgb(0, 152, 199);
 }
 
+@media screen and (max-width: 600px) {
+    main {
+        max-width: 90%; 
+    }
+
+    h1 {
+        font-size: 40px; 
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+    }
+}
