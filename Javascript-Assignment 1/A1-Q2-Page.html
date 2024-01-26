@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment one Q2</title>
+    <script>
+        function ErrorMessage() {
+            var errorMessageElement = document.getElementById('error-message');
+            errorMessageElement.style.display = 'block';
+        }
+    </script>
+    <style>
+        #error-message {
+            display: none;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="error-message">Error! Please Enter a valid password</div>
+    <button onclick="ErrorMessage()">Show Error</button> 
 </body>
 </html>
