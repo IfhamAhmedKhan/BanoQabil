@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment one Q19</title>
 </head>
 <body>
-    
+    <script>
+        // Legal variable names
+        var legalVariable1 = "legalVariable1";
+        var legal_variable_2 = "legal_variable_2";
+        var $price = "$price";
+        var camelCaseVariable = "camelCaseVariable";
+        var variable123 = "variable123";
+
+        // Illegal variable names
+        var illegalVariable1 = "illegal-variable";
+        var illegal_variable_2 = "123variable";
+        var illegal_$price = "variable@symbol";
+        var space = "variable with space";
+        var keyword = "break"; 
+
+        // Display the results
+        document.write("<strong>Legal Variable Names:</strong><br>");
+        document.write("1. " + legalVariable1 + "<br>");
+        document.write("2. " + legal_variable_2 + "<br>");
+        document.write("3. " + $price + "<br>");
+        document.write("4. " + camelCaseVariable + "<br>");
+        document.write("5. " + variable123 + "<br><br>");
+
+        document.write("<strong>Illegal Variable Names:</strong><br>");
+        document.write("1. " + illegalVariable1 + "<br>");
+        document.write("2. " + illegal_variable_2 + "<br>");
+        document.write("3. " + illegal_$price + "<br>");
+        document.write("4. " + space + "<br>");
+        document.write("5. " + keyword + "<br>");
+    </script>
 </body>
 </html>

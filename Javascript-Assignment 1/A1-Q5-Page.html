@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment one Q5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <h1>Alert Question</h1>
+
+    <button onclick="displayAlert('This is the first alert!')">Show Alert 1</button>
+    <button onclick="displayAlert('This is the second alert!')">Show Alert 2</button>
+    <button onclick="displayAlert('This is the third alert!')">Show Alert 3</button>
+
+    <script>
+        function displayAlert(message) {
+            alert(message);
+        }
+    </script>
+
 </body>
 </html>
