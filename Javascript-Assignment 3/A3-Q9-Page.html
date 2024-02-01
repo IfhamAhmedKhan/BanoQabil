@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3-Q9-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var firstNumber = parseFloat(prompt("Enter the first number:"));
+        var secondNumber = parseFloat(prompt("Enter the second number:"));
+        var operation = prompt("Enter the operation (+, -, *, /, %):");
+        var result;
+        if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+          if (operation === '+') {
+            result = firstNumber + secondNumber;
+          } else if (operation === '-') {
+            result = firstNumber - secondNumber;
+          } else if (operation === '*') {
+            result = firstNumber * secondNumber;
+          } else if (operation === '/') {
+            if (secondNumber !== 0) {
+              result = firstNumber / secondNumber;
+            } else {
+              alert("Error: Division by zero is not allowed.");
+            }
+          } else if (operation === '%') {
+            if (secondNumber !== 0) {
+              result = firstNumber % secondNumber;
+            } else {
+              alert("Error: Modulo by zero is not allowed.");
+            }
+          } else {
+            alert("Invalid operation. Please enter a valid operation.");
+          }
+      
+          if (result !== undefined) {
+            alert("Result: " + result);
+          }
+        } else {
+          alert("Invalid input. Please enter valid numbers.");
+        }
+      </script>
+</head>
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+</html>

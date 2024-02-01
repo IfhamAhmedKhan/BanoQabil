@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3-Q8-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var temperature = parseFloat(prompt("Enter the temperature in Celsius:"));
+        if (!isNaN(temperature)) {
+          if (temperature > 40) {
+            alert("It is too hot outside. ☀️");
+          } else if (temperature > 30) {
+            alert("The Weather today is Normal. 🌤️");
+          } else if (temperature > 20) {
+            alert("Today’s Weather is cool. 🌦️");
+          } else if (temperature > 10) {
+            alert("OMG! Today’s weather is so Cool. ❄️");
+          } else {
+            alert("It's extremely cold. 🥶");
+          }
+        } else {
+          alert("Invalid input. Please enter a valid temperature.");
+        }
+      </script>
+</head>
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+</html>

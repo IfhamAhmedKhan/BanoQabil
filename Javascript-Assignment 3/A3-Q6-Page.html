@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3-Q6-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var userNumber = parseInt(prompt("Enter a number:"));
+      
+        if (!isNaN(userNumber)) {
+          if (userNumber % 3 === 0) {
+            alert(userNumber + " is divisible by 3. 🎉");
+          } else {
+            alert(userNumber + " is not divisible by 3. ❌");
+          }
+        } else {
+          alert("Invalid input. Please enter a valid number.");
+        }
+      </script>
+</head>
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+</html>
