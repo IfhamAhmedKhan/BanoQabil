@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-Q5-Page</title>
+    <style>
+        body {
+            background-image: url(https://coolbackgrounds.io/images/backgrounds/index/disco-dba865f1.png);
+            background-repeat: no-repeat;
+        }
+        table,tr {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+            border: 2px solid black; 
+        }
+    </style>
+    <script>
+        // Take three subjects' names from the user
+        var subject1 = prompt("Enter the name of the first subject:");
+        var subject2 = prompt("Enter the name of the second subject:");
+        var subject3 = prompt("Enter the name of the third subject:");
+
+        // Total marks for each subject is 100
+        var totalMarks = 100;
+
+        // Take obtained marks for the first subject from the user
+        var obtainedMarks1 = parseInt(prompt("Enter obtained marks for " + subject1 + ":"));
+
+        // Take obtained marks for the remaining 2 subjects from the user
+        var obtainedMarks2 = parseInt(prompt("Enter obtained marks for " + subject2 + ":"));
+        var obtainedMarks3 = parseInt(prompt("Enter obtained marks for " + subject3 + ":"));
+
+        // Calculate total marks and percentage
+        var totalObtainedMarks = obtainedMarks1 + obtainedMarks2 + obtainedMarks3;
+        var percentage = (totalObtainedMarks / (3 * totalMarks)) * 100;
+
+        // Display the result in a table
+        document.write("<h2>Subject Results</h2>");
+        document.write("<table>");
+        document.write("<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th></tr>");
+        document.write("<tr><td>" + subject1 + "</td><td>" + totalMarks + "</td><td>" + obtainedMarks1 + "</td></tr>");
+        document.write("<tr><td>" + subject2 + "</td><td>" + totalMarks + "</td><td>" + obtainedMarks2 + "</td></tr>");
+        document.write("<tr><td>" + subject3 + "</td><td>" + totalMarks + "</td><td>" + obtainedMarks3 + "</td></tr>");
+        document.write("<tr><th>Total</th><th>" + (3 * totalMarks) + "</th><th>" + totalObtainedMarks + "</th></tr>");
+        document.write("<tr><th colspan='2'>Percentage</th><th>" + percentage.toFixed(2) + "%</th></tr>");
+        document.write("</table>");
+    </script>
+</head>
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+</html>

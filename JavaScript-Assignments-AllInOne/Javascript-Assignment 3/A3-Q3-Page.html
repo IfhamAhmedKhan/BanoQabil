@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3-Q3-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var remainingFuel = parseFloat(prompt("Enter the remaining fuel in your car (in liters):"));
+        if (!isNaN(remainingFuel) && remainingFuel < 0.25) {
+          alert("Please refill the fuel in your car.");
+        } else {
+          alert("You have sufficient fuel. Have a safe journey!");
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3-Q5-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var secretNumber = Math.floor(Math.random() * 10) + 1;
+        var userGuess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
+      
+        if (userGuess === secretNumber) {
+          alert("Congrats! Correct answer.");
+        } else if (userGuess + 1 === secretNumber || userGuess - 1 === secretNumber) {
+          alert("Close enough to the correct answer.");
+        } else {
+          alert("Sorry, incorrect guess. The correct answer was " + secretNumber + ".");
+        }
+      </script>
+</head>
+<body>
+  <br>
+  <a href="index.html"><button>Go back</button></a>
+</body>
+</html>
