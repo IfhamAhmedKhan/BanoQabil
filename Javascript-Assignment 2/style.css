@@ -1,0 +1,39 @@
+body {
+    background-image: url(https://coolbackgrounds.io/images/backgrounds/index/disco-dba865f1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+#button_Q {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+a {
+    text-decoration: none;
+}
