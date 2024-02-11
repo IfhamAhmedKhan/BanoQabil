@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-Q1-Page</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+
+    <script>
+        let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        function searchItem(item) {
+            item = item.toLowerCase();
+
+            let found = A.includes(item);
+
+            if (found) {
+                alert(`Yes, "${item}" is found in the list.`);
+            } else {
+                alert(`Sorry, "${item}" is not found in the list.`);
+            }
+        }
+        let userInput = prompt("Enter an item to search:");
+        searchItem(userInput);
+
+    </script>
+</head>
+
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+
+</html>

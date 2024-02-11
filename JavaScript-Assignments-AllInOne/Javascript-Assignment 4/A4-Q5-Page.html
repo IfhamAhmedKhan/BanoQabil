@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-Q1-Page</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+</head>
+<body>
+    <div id="sortedScores"></div>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+
+    <script>
+        let studentScores = [85, 92, 78, 90, 88];
+        studentScores.sort((a, b) => a - b);
+
+        let sortedScoresElement = document.getElementById("sortedScores");
+        sortedScoresElement.innerHTML = "<h2>Sorted student scores in ascending order:</h2>";
+        
+        let ul = document.createElement("ul");
+        studentScores.forEach(score => {
+            let li = document.createElement("li");
+            li.textContent = score;
+            ul.appendChild(li);
+        });
+
+        sortedScoresElement.appendChild(ul);
+    </script>
+</body>
+</html>

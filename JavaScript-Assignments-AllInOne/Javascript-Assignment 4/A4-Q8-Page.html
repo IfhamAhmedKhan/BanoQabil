@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Generator</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+</head>
+<body>
+    <a href="index.html"><button>Go back</button></a>
+    <h2>a. Counting: </h2>
+    <p id="countingSeries"></p>
+
+    <h2>b. Reverse counting: </h2>
+    <p id="reverseCountingSeries"></p>
+
+    <h2>c. Even: </h2>
+    <p id="evenSeries"></p>
+
+    <h2>d. Odd: </h2>
+    <p id="oddSeries"></p>
+
+    <h2>e. Series: </h2>
+    <p id="customSeries"></p>
+
+    <script>
+        let countingSeries = "";
+        for (let i = 1; i <= 15; i++) {
+            countingSeries += i + ", ";
+        }
+        document.getElementById("countingSeries").textContent = countingSeries.slice(0, -2);
+
+        let reverseCountingSeries = "";
+        for (let i = 10; i >= 1; i--) {
+            reverseCountingSeries += i + ", ";
+        }
+        document.getElementById("reverseCountingSeries").textContent = reverseCountingSeries.slice(0, -2);
+
+        let evenSeries = "";
+        for (let i = 0; i <= 20; i += 2) {
+            evenSeries += i + ", ";
+        }
+        document.getElementById("evenSeries").textContent = evenSeries.slice(0, -2);
+
+        let oddSeries = "";
+        for (let i = 1; i <= 19; i += 2) {
+            oddSeries += i + ", ";
+        }
+        document.getElementById("oddSeries").textContent = oddSeries.slice(0, -2);
+
+        let customSeries = "";
+        for (let i = 2; i <= 20; i += 2) {
+            customSeries += i + "k, ";
+        }
+        document.getElementById("customSeries").textContent = customSeries.slice(0, -2);
+    </script>
+</body>
+</html>

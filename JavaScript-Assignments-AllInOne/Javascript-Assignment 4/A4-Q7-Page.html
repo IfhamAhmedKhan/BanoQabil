@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+</head>
+
+<body>
+    <div id="multiplicationTable"></div>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+
+    <script>
+        let tableNumber = parseInt(prompt("Enter the number for multiplication table:"));
+        let tableLength = parseInt(prompt("Enter the length of the multiplication table:"));
+
+        let multiplicationTableDiv = document.getElementById("multiplicationTable");
+
+        if (isNaN(tableNumber) || isNaN(tableLength)) {
+            multiplicationTableDiv.textContent = "Invalid input. Please enter valid numbers.";
+        } else {
+            let table = document.createElement("table");
+            table.border = "1";
+            table.style.borderCollapse = "collapse";
+
+            let headerRow = document.createElement("tr");
+            let headerCell = document.createElement("th");
+            headerCell.textContent = "Multiplication Table for " + tableNumber;
+            headerCell.colSpan = "2";
+            headerRow.appendChild(headerCell);
+            table.appendChild(headerRow);
+
+            for (let i = 1; i <= tableLength; i++) {
+                let row = document.createElement("tr");
+                let cell1 = document.createElement("td");
+                let cell2 = document.createElement("td");
+                cell1.textContent = tableNumber + " * " + i;
+                cell2.textContent = tableNumber * i;
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                table.appendChild(row);
+            }
+
+            multiplicationTableDiv.appendChild(table);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-Q1-Page</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+    <script>
+        var colorsArray = ["red", "blue", "green", "yellow"];
+
+        // Display array elements in the browser
+        document.write("<p>Original Array: " + colorsArray.join(", ") + "</p>");
+
+        // a. Ask user for color to add to the beginning
+        var newColorStart = prompt("Enter a color to add to the beginning:");
+        colorsArray.unshift(newColorStart);
+        document.write("<p>Updated Array (Added to the beginning): " + colorsArray.join(", ") + "</p>");
+
+        // b. Ask user for color to add to the end
+        var newColorEnd = prompt("Enter a color to add to the end:");
+        colorsArray.push(newColorEnd);
+        document.write("<p>Updated Array (Added to the end): " + colorsArray.join(", ") + "</p>");
+
+        // c. Add two more colors to the beginning
+        colorsArray.unshift("purple", "orange");
+        document.write("<p>Updated Array (Added two colors to the beginning): " + colorsArray.join(", ") + "</p>");
+
+        // d. Delete the first color
+        colorsArray.shift();
+        document.write("<p>Updated Array (Deleted first color): " + colorsArray.join(", ") + "</p>");
+
+        // e. Delete the last color
+        colorsArray.pop();
+        document.write("<p>Updated Array (Deleted last color): " + colorsArray.join(", ") + "</p>");
+
+        // f. Ask user for index and color to add
+        var indexToAdd = prompt("Enter the index to add a color:");
+        var colorToAdd = prompt("Enter the color to add:");
+        colorsArray.splice(indexToAdd, 0, colorToAdd);
+        document.write("<p>Updated Array (Added color at index " + indexToAdd + "): " + colorsArray.join(", ") + "</p>");
+
+        // g. Ask user for index and number of colors to delete
+        var indexToDelete = prompt("Enter the index to delete color(s):");
+        var numToDelete = prompt("Enter the number of colors to delete:");
+        colorsArray.splice(indexToDelete, numToDelete);
+        document.write("<p>Updated Array (Deleted " + numToDelete + " color(s) from index " + indexToDelete + "): " + colorsArray.join(", ") + "</p>");
+    </script>
+</head>
+<body>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+</body>
+</html>

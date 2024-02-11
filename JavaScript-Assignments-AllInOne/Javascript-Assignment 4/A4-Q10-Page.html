@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert to Title Case</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+</head>
+<body>
+    <div id="titleCaseOutput"></div>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+
+    <script>
+        // Function to convert string to title case
+        function toTitleCase(str) {
+            return str.toLowerCase().split(' ').map(function(word) {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }).join(' ');
+        }
+
+        // Take user input
+        let userInput = prompt("Enter a string:");
+
+        // Convert to title case
+        let titleCaseString = toTitleCase(userInput);
+
+        // Display the result on the HTML page
+        let titleCaseOutputDiv = document.getElementById("titleCaseOutput");
+        titleCaseOutputDiv.textContent = "Input in title case: " + titleCaseString;
+    </script>
+</body>
+</html>

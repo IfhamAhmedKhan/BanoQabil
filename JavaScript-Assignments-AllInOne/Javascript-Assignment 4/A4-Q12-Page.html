@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String to Number Conversion</title>
+    <link rel="stylesheet" href="../Javascript-Assignment 3/style.css">
+</head>
+<body>
+    <div id="output"></div>
+    <br>
+    <a href="index.html"><button>Go back</button></a>
+
+    <script>
+        // Given string
+        let str = "472";
+
+        // Convert string to number
+        let num = parseInt(str);
+
+        // Display the values & types
+        let outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "<p>Original String: " + str + "<br>Type of String: " + typeof str + "</p>" +
+                              "<p>Converted Number: " + num + "<br>Type of Number: " + typeof num + "</p>";
+    </script>
+</body>
+</html>
