@@ -3,7 +3,7 @@
     font-family: 'Poppins', sans serif;
 }
 body{
-    background-image: url(https://coolbackgrounds.io/images/backgrounds/index/disco-dba865f1.png);
+    background-image: url(https://www.icegif.com/wp-content/uploads/2023/12/icegif-96.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,7 +47,7 @@ header{
     border-radius: 30px;
     color: #fff;
     padding: 0 0 0 42px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 i{
     position: relative;
@@ -65,7 +65,7 @@ i{
     height: 45px;
     outline: none;
     width: 100%;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 0, 0, 0.7);
     cursor: pointer;
     transition: .3s;
 }

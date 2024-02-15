@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Ifterious | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Ifterious | Sign up</title>
 </head>
+
 <body>
     <div class="box">
         <div class="container">
             <div class="top-header">
-                <span>Already have an account? <a href="index.html"> Login now.</a></span>
-                <header>Login</header>
+                <span class="animate__animated animate__fadeIn">Already have an account? <a href="index.html"> Login
+                        now.</a></span>
+                <header class="animate__animated animate__fadeIn">Sign up</header>
             </div>
-
-            <div class="input-field">
-                <input type="text" class="input" placeholder="Username" required>
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-field">
-                <input type="email" class="input" placeholder="Email" required>
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-field">
-                <input type="password" class="input" placeholder="Password" required>
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-field">
-                <input type="password" class="input" placeholder="Confirm Password" required>
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-field">
-                <a href="index.html"><input type="submit" class="submit" value="sign-up"></a>
-            </div>
-
+            <form id="signupForm" action="index.html">
+                <div class="input-field">
+                    <label for="userName">
+                        <input type="text" id="userName" class="input animate__animated animate__pulse"
+                            placeholder="Username" required>
+                        <i class="bx bx-user"></i>
+                    </label>
+                </div>
+                <div class="input-field">
+                    <label for="userEmail">
+                        <input type="email" id="userEmail" class="input animate__animated animate__pulse"
+                            placeholder="Email" required>
+                        <i class="bx bx-envelope"></i>
+                    </label>
+                </div>
+                <div class="input-field">
+                    <label for="userPassword">
+                        <input type="password" id="userPassword" class="input animate__animated animate__pulse"
+                            placeholder="Password" required minlength="8" maxlength="15">
+                        <i class="bx bx-lock-alt"></i>
+                    </label>
+                </div>
+                <div class="input-field">
+                    <label for="rePassword">
+                        <input type="password" id="rePassword" class="input animate__animated animate__pulse"
+                            placeholder="Confirm Password" required minlength="8" maxlength="15">
+                        <i class="bx bx-lock-alt"></i>
+                    </label>
+                </div>
+                <div class="input-field">
+                    <button type="submit" class="submit animate__animated animate__pulse" value="sign-up">Sign
+                        up</button>
+                </div>
+            </form>
         </div>
     </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            var password = document.getElementById('userPassword').value;
+            var confirmPassword = document.getElementById('rePassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                event.preventDefault();
+            } else {
+                localStorage.setItem('userPassword', password);
+                alert('Account created successfully.');
+            }
+        });
+    </script>
 </body>
+
 </html>
