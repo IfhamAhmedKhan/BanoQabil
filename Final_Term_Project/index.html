@@ -43,7 +43,7 @@
                     <label for="check" class="animate__animated animate__fadeIn"> Remember Me</label>
                 </div>
                 <div class="right">
-                    <label class="animate__animated animate__fadeIn"><a href="#">Forgot password?</a></label>
+                    <label class="animate__animated animate__fadeIn"><a href="#" id="forgotPassword">Forgot password?</a></label>
                 </div>
             </div>
         </div>
@@ -52,24 +52,31 @@
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             var username = document.getElementById('userName').value;
             var password = document.getElementById('userPassword').value;
-            var name1 = "Ifham"
+            var name1 = "Ifham Khan"
             var pass1 = "Qwerty123"
-            var name2 = "Ifham"
+            var name2 = "Adil Ahmed Shekhani"
             var pass2 = "Qwerty123"
-            var name3 = "Ifham"
-            var pass3 = "Qwerty123"
+            var name3 = "Iftantary"
+            var pass3 = "Union007"
             var name4 = "Ifham"
             var pass4 = "Qwerty123"
-            var name5 = "Ifham"
+            var name5 = "Afnan"
             var pass5 = "Qwerty123"
-            var name6 = "Ifham"
+            var name6 = "Aayan"
             var pass6 = "Qwerty123"
-            if (name1 == username || pass1 == password || name2 == username || pass2 == password || name3 == username || pass3 == password || name4 == username || pass4 == password || name5 == username || pass5 == password || name6 == username || pass6 == password) {
+            var new_account_username = localStorage.getItem('userName')
+            var new_account_password = localStorage.getItem('userPassword')
+            if ((name1 == username && pass1 == password) || (name2 == username && pass2 == password) || (name3 == username && pass3 == password) || (name4 == username && pass4 == password) || (name5 == username && pass5 == password) || (name6 == username && pass6 == password) || (new_account_username == username && new_account_password == password)) {
                 alert('Correct username and password.');
             } else {
                 alert('Wrong password or username entered.');
                 event.preventDefault();
             }
+        });
+
+        document.getElementById('forgotPassword').addEventListener('click', function (event) {
+            alert('Check your email for password reset instructions.');
+            event.preventDefault();
         });
     </script>
 </body>
