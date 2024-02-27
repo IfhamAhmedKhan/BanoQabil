@@ -1,11 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Add to cart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
     <link rel="icon" href="bq-final-project-images--main/logo.png"
         type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <!-- box icon -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+        .cart-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .cart-item button {
+            padding: 5px 10px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cart-item button:hover {
+            background-color: #cc3700;
+        }
+
+        .checkout-button {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
+    <div style="display: flex; justify-content: space-between;">
+        <h1 style="text-align: center;">Cart</h1>
+        <h1 style="text-align: right;"><a href="index.html">Go back</a></h1>
+    </div>
+    <hr>
+    <div class="cart-container">
+        <ul id="cart-items"></ul>
+    </div>
+    <button id="checkout-button" class="checkout-button"><a href="Billing.html">Proceed to Billing</a></button>
+
+
+    <script>
+        // Load cart from local storage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Display cart items
+        const cartItemsElement = document.getElementById('cart-items');
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="cart-item">
+                    <span>${item.name} - $${item.price.toFixed(2)}</span>
+                    <button class="remove-from-cart" data-index="${index}">Remove</button>
+                </div>`;
+            cartItemsElement.appendChild(li);
+        });
+
+        // Remove item from cart
+        document.querySelectorAll('.remove-from-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                location.reload(); 
+            });
+        });
+
+        // Show checkout button if cart is not empty
+        if (cart.length > 0) {
+            document.getElementById('checkout-button').style.display = 'block';
+        }
+    </script>
+
+<hr>
+<section class="footer">
+    <div class="footer-box">
+        <h2>TECH TREND</h2>
+        <P>Explore a world of innovation with our curated selection of top-notch gadgets, from sleek smartphones to powerful gaming rigs. Our commitment to quality, impeccable customer service, and lightning-fast delivery make us your go-to tech hub. Elevate your digital lifestyle with Tech Trends—where technology meets excellence. </P>
+        <div class="social">
+            <a href="https://www.youtube.com/@iftantarylive7083"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="https://twitter.com/Ifterious"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.instagram.com/iftantary/"><i class='bx bxl-instagram' ></i></a>
+            <a href="https://www.tiktok.com/@mortalgaming163?lang=en"><i class='bx bxl-tiktok' ></i></a>
+        </div>
+    </div>
+    <div class="footer-box">
+        <h3>Support</h3>
+        <li><a href="#">products</a></li>
+        <li><a href="#">Help & Support</a></li>  
+        <li><a href="#">Return policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">products</a></li>
+    </div>
+
+    <div class="footer-box">
+        <h3>Support</h3>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog Post</a></li>
+        <li><a href="#">Our Branches</a></li>   
+    </div>
     
+    <div class="footer-box">
+        <h3>Contact</h3>
+        <div class="Contact">
+            <span><i class='bx bxs-map'></i>MAJU Bus Stop, Main Shahrah-e-Faisal, 22-E, Block-6, PECHS, Karachi-75400</span>
+            <br>
+            <span><i class='bx bxs-phone'></i>+92-3161611907</span>
+            <br>
+            <span><i class='bx bxs-envelope'></i>ifham.khan105@gmail.com</span>
+         </div>
+    </div>
+
+</section>
+
+
+    <!-- Copyright -->
+    <div class="Copyright">
+        <P>&#169;  Ifterious All Right Reserved</P>
+    </div>
+
+    <!-- link to js  -->
+    <script src="main.js"></script>
 </body>
 </html>
+

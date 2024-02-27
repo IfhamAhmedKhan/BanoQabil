@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Tech Trends</title>
+    <title>Ifterious Tech</title>
     <link rel="icon" href="bq-final-project-images--main/logo.png"
         type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <!-- box icon -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <!-- navbar     -->
@@ -22,11 +26,11 @@
 
     <!-- links  -->
     <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#customer">Reviews</a></li>
-        <li><a href="../index.html">Logout</a></li>
+        <li class="animate__animated animate__bounce"><a href="#home">Home</a></li>
+        <li class="animate__animated animate__bounce"><a href="#about">About</a></li>
+        <li class="animate__animated animate__bounce"><a href="#products">Products</a></li>
+        <li class="animate__animated animate__bounce"><a href="#customer">Reviews</a></li>
+        <li class="animate__animated animate__bounce"><a href="../index.html">Logout</a></li>
     </ul>
 
     <!-- Icons -->
@@ -48,10 +52,10 @@
    <!-- home  -->
    <section class="home" id="home">
     <div class="home-text">
-    <h1>Tech Trend <br></h1>
-    <p style="color: rgb(255, 255, 255);"><bold>Trends, your ultimate destination for cutting-edge technology accessories! Dive into a world where innovation meets style, and discover a curated collection of top-notch tech accessories that seamlessly blend functionality with flair. From state-of-the-art phone cases to ergonomic laptop stands, we've handpicked the latest trends to elevate your tech experience. Explore our diverse range of products designed to complement your gadgets while reflecting your unique personality.
+    <h1 class="animate__animated animate__bounce">Ifterious Tech <br></h1>
+    <p class="animate__animated animate__fadeIn"style="color: rgb(255, 255, 255);"><bold>Trends, your ultimate destination for cutting-edge technology accessories! Dive into a world where innovation meets style, and discover a curated collection of top-notch tech accessories that seamlessly blend functionality with flair. From state-of-the-art phone cases to ergonomic laptop stands, we've handpicked the latest trends to elevate your tech experience. Explore our diverse range of products designed to complement your gadgets while reflecting your unique personality.
     </bold></p>
-    <a href="#products" class="btn">Shop Now</a>
+    <a href="#products" class="btn animate__animated animate__fadeIn">Shop Now</a>
     </div>
 <div>
 </div>
@@ -63,9 +67,9 @@
         <img src="bq-final-project-images--main/c4.png" alt="">
     </div>
     <div class="about-text">
-        <h2>about tech Trend</h2>
-        <P><h4>Discover a world of tech wonders at our online store! Whether you're a gaming guru, tech enthusiast, or professional in need, we've got your back with a diverse range of cutting-edge computer products. Explore powerful laptops, sleek desktops, and top-notch accessories—all geared to enhance your digital journey. We've carefully curated quality meets affordability, ensuring that you find the perfect match for your needs. Navigating our user-friendly website is a breeze, and don't miss out on exclusive deals and promotions.</h4></P>
-         <a href="#" class="btn">Learn More</a>
+        <h2 class="animate__animated animate__bounce">about Ifterious Tech</h2>
+        <P><h4 class="animate__animated animate__fadeIn">Discover a world of tech wonders at our online store! Whether you're a gaming guru, tech enthusiast, or professional in need, we've got your back with a diverse range of cutting-edge computer products. Explore powerful laptops, sleek desktops, and top-notch accessories—all geared to enhance your digital journey. We've carefully curated quality meets affordability, ensuring that you find the perfect match for your needs. Navigating our user-friendly website is a breeze, and don't miss out on exclusive deals and promotions.</h4></P>
+         <a href="#" class="btn animate__animated animate__fadeIn">Learn More</a>
     
     </div>
 
@@ -73,73 +77,72 @@
    <!-- Products -->
    <section class="products" id="products">
     <div class="heading">
-        <h2>Our best selling  Products</h2>
+        <h2 class="animate__animated animate__bounceIn">Our best selling  Products</h2>
     </div>
    
    
     <!-- container -->
     <div class="products-container">
-        <div class="box">
+        <div class="box" data-name="R-6600 Audio" data-price="35">
             <img src="bq-final-project-images--main/h1.png" alt="">
             <h3><bold>R-6600 Audio</bold></h3>
             <div class="content">
                 <span>Price 35$</span>
-                <a href="">Add to cart</a>
+                <button class="add-to-cart">Add to cart</button>
             </div>
         </div>
       
 
 
-      <div class="box">
-        <img src="bq-final-project-images--main/pr12.png" alt="">
-        <h3>Pakistan's Pure</h3>
-        <div class="content">
-            <span>Price 41$</span>
-            <a href="">Add to cart</a>
+        <div class="box" data-name="Pakistan's Pure" data-price="41">
+            <img src="bq-final-project-images--main/pr12.png" alt="">
+            <h3>Pakistan's Pure</h3>
+            <div class="content">
+                <span>Price 41$</span>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
         </div>
-    </div>
- 
 
 
-  <div class="box">
+  <div class="box" data-name="Lenovo Legion Tower 7i" data-price="100">
     <img src="bq-final-project-images--main/pr7.png" alt="">
     <h3><bold>Lenovo Legion Tower 7i</bold></h3>
     <div class="content">
         <span>Price 100$</span>
-        <a href="">Add to cart</a>
+        <button class="add-to-cart">Add to cart</button>
     </div>
 </div>
 
 
 
-<div class="box">
+<div class="box" data-name="Apple Watch Ultra 2" data-price="25">
     <img src="bq-final-project-images--main/pr9.png" alt="">
     <h3>Apple Watch Ultra 2</h3>
     <div class="content">
         <span> Price 25$</span>
-        <a href="">Add to cart</a>
+        <button class="add-to-cart">Add to cart</button>
     </div>
 </div>
 
 
 
-<div class="box">
+<div class="box" data-name="Logitech G PRO X SUPERLIGHT 2" data-price="140">
     <img src="bq-final-project-images--main/pr11.png" alt="">
     <h3>Logitech G PRO X SUPERLIGHT 2</h3>
     <div class="content">
         <span>Price 140$</span>
-        <a href="">Add to cart</a>
+        <button class="add-to-cart">Add to cart</button>
     </div>
 </div>
 
 
 
-<div class="box">
+<div class="box" data-name="Apple AirPods Pro 2" data-price="38">
     <img src="bq-final-project-images--main/a1.png" alt="">
     <h3>Apple AirPods Pro 2</h3>
     <div class="content">
         <span>Price 38$</span>
-        <a href="">Add to cart</a>
+        <button class="add-to-cart">Add to cart</button>
     </div>
 </div>                
    </section>
@@ -160,7 +163,7 @@
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star-half'></i>
         </div>
-        <P>"Overjoyed with my Tech Trends iPhone! It's not just a phone; it's a sleek marvel packed with advanced features. Lightning-fast delivery made the experience even better. Highly recommend this gem from Tech Trends—it's a game-changer in the tech world."</P>
+        <P>"Overjoyed with my Ifterious Tech iPhone! It's not just a phone; it's a sleek marvel packed with advanced features. Lightning-fast delivery made the experience even better. Highly recommend this gem from Tech Trends—it's a game-changer in the tech world."</P>
         <h2>Ahmed Zaheer</h2>
         <img src="bq-final-project-images--main/rev1.jpg" alt="">
        </div>
@@ -174,7 +177,7 @@
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star-half'></i>
         </div>
-        <P>"Tech Trends nailed it with my gaming PC! It's a powerhouse—runs games like a dream. What's cool? I got to customize it to fit my gaming style. The customer service? Exceptional. They guided me through the whole process, ensuring I got the perfect rig."</P>
+        <P>"Ifterious Tech nailed it with my gaming PC! It's a powerhouse—runs games like a dream. What's cool? I got to customize it to fit my gaming style. The customer service? Exceptional. They guided me through the whole process, ensuring I got the perfect rig."</P>
         <h2>Ifham khan</h2>
         <img src="bq-final-project-images--main/IMG_20211027_234719.jpg" alt="">
        </div>
@@ -188,7 +191,7 @@
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star-half'></i>
         </div>
-        <P>"Ecstatic about my Tech Trends AirPods Pro! They're not just earbuds; they're a sound revolution. Crystal clear, noise-canceling magic in a comfy design. Battery life? Impressive. These buds have upgraded my music and calls. Worth every cent—I'm hooked!"</P>
+        <P>"Ecstatic about my Ifterious Tech AirPods Pro! They're not just earbuds; they're a sound revolution. Crystal clear, noise-canceling magic in a comfy design. Battery life? Impressive. These buds have upgraded my music and calls. Worth every cent—I'm hooked!"</P>
         <h2>Shahzaman</h2>
         <img src="bq-final-project-images--main/shahAhmed.jpeg" alt="">
        </div>
@@ -197,8 +200,8 @@
 
     <section class="footer">
         <div class="footer-box">
-            <h2>TECH TREND</h2>
-            <P>Explore a world of innovation with our curated selection of top-notch gadgets, from sleek smartphones to powerful gaming rigs. Our commitment to quality, impeccable customer service, and lightning-fast delivery make us your go-to tech hub. Elevate your digital lifestyle with Tech Trends—where technology meets excellence. </P>
+            <h2>Ifterious Tech</h2>
+            <P>Explore a world of innovation with our curated selection of top-notch gadgets, from sleek smartphones to powerful gaming rigs. Our commitment to quality, impeccable customer service, and lightning-fast delivery make us your go-to tech hub. Elevate your digital lifestyle with Ifterious Tech—where technology meets excellence. </P>
             <div class="social">
                 <a href="https://www.youtube.com/@iftantarylive7083"><i class='bx bxl-facebook-circle' ></i></a>
                 <a href="https://twitter.com/Ifterious"><i class='bx bxl-twitter' ></i></a>
@@ -226,11 +229,11 @@
         <div class="footer-box">
             <h3>Contact</h3>
             <div class="Contact">
-                <span><i class='bx bxs-map'></i>26 Streets Boston Road.Icon Tower's</span>
+                <span><i class='bx bxs-map'></i>MAJU Bus Stop, Main Shahrah-e-Faisal, 22-E, Block-6, PECHS, Karachi-75400</span>
                 <br>
-                <span><i class='bx bxs-phone'></i>+92-111-222-333</span>
+                <span><i class='bx bxs-phone'></i>+92-3161611907</span>
                 <br>
-                <span><i class='bx bxs-envelope'></i>dt@techtrend.com</span>
+                <span><i class='bx bxs-envelope'></i>ifham.khan105@gmail.com</span>
              </div>
         </div>
    
@@ -239,7 +242,7 @@
    
     <!-- Copyright -->
     <div class="Copyright">
-        <P>&#169;  Ifterious All Right Reserved</P>
+        <P>&#169;  Ifterious Tech All Right Reserved</P>
     </div>
 
    
