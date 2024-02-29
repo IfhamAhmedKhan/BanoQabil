@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing</title>
+    <title>Checkout</title>
+    <link rel="icon" href="bq-final-project-images--main/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <!-- box icon -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -123,6 +124,9 @@ button:hover {
         }
 
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
     <script src="https://kit.fontawesome.com/9fb26d8eab.js" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: rgba(203, 243, 243, 0.877);">
@@ -131,7 +135,7 @@ button:hover {
             <h1 style="text-align: left; margin: 0;">Checkout</h1>
             <h1 style="margin-left: 10px;"><i class="fa-regular fa-credit-card"></i></h1>
         </div>
-        <h1 style="text-align: right; margin: 0;"><a href="index.html" style="text-decoration: none;">Back <i
+        <h1 style="text-align: right; margin: 0;"><a href="index.html" style="text-decoration: none;"><i
                     class="fa-solid fa-right-from-bracket"></i></a></h1>
     </div>
     <hr>
@@ -148,6 +152,9 @@ button:hover {
         </form>
         <hr>
     </div>
+<hr>
+<div id="map" style="height: 300px;"></div>
+
 <hr>
     <section class="footer">
         <div class="footer-box">
@@ -195,6 +202,51 @@ button:hover {
     </div>
 
     <script>
+        // Initialize the map
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+// Add the OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Add a marker to the map
+var marker = L.marker([51.5, -0.09]).addTo(map);
+
+// Function to update the marker position based on the entered address
+function updateMap(address) {
+    var url = 'https://nominatim.openstreetmap.org/search?format=json&q=' + address;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                var lat = data[0].lat;
+                var lon = data[0].lon;
+                map.setView([lat, lon], 13);
+                marker.setLatLng([lat, lon]);
+            } else {
+                alert('Address not found');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error fetching address');
+        });
+}
+
+// Form submission event listener
+document.getElementById('billing-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    var firstName = document.getElementById('first-name').value;
+    var lastName = document.getElementById('last-name').value;
+    var address = document.getElementById('address').value;
+
+    // Update the map
+    updateMap(address);
+
+    // Show an alert with the order details
+    alert(`Your order has been placed.\n\nFirst Name: ${firstName}\nLast Name: ${lastName}\nAddress: ${address}`);
+});
         document.getElementById('billing-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
             const firstName = document.getElementById('first-name').value;

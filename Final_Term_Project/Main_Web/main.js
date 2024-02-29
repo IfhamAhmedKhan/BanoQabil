@@ -1,3 +1,16 @@
+const text = "Trends, your ultimate destination for cutting-edge technology accessories! Dive into a world where innovation meets style, and discover a curated collection of top-notch tech accessories that seamlessly blend functionality with flair. From state-of-the-art phone cases to ergonomic laptop stands, we've handpicked the latest trends to elevate your tech experience. Explore our diverse range of products designed to complement your gadgets while reflecting your unique personality.";
+
+let i = 0;
+function type() {
+    if (i < text.length) {
+        document.getElementById('typing-text').textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 20); 
+    }
+}
+type();
+
+
 let cartItemsCount = localStorage.getItem('cartItemsCount') ? parseInt(localStorage.getItem('cartItemsCount')) : 0;
 
 // Function to update cart items count
