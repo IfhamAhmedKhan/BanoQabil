@@ -25,6 +25,9 @@
             align-items: center;
             padding: 10px;
             border-bottom: 1px solid #ccc;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
 
         .cart-item button {
@@ -40,33 +43,104 @@
         }
 
         .checkout-button {
-            display: none;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.checkout-button a {
+    color: white;
+}
 
-        .checkout-button:hover {
-            background-color: #45a049;
-        }
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+        .total-price {
+            
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+.no-item-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+    .cart-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item button {
+        margin-top: 10px;
+    }
+
+    .checkout-button {
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-box {
+        margin-bottom: 20px;
+    }
+
+    .footer-box h2,
+    .footer-box h3 {
+        text-align: center;
+    }
+
+    .footer-box .social {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-box .Contact {
+        text-align: center;
+    }
+}
+
+
     </style>
+    <script src="https://kit.fontawesome.com/9fb26d8eab.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div style="display: flex; justify-content: space-between;">
-        <h1 style="text-align: center;" class="animate__animated animate__fadeInLeft">Cart</h1>
-        <h1 style="text-align: right;"><a href="index.html" class="animate__animated animate__fadeInLeft">Go back</a></h1>
+<body style="background-color: rgba(203, 243, 243, 0.877);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+            <h1 style="text-align: left; margin: 0;">Cart</h1>
+            <h1 style="margin-left: 10px;"><i class='bx bx-cart'></i></h1>
+        </div>
+        <h1 style="text-align: right; margin: 0;"><a href="index.html">Back <i class="fa-solid fa-right-from-bracket"></i></a></h1>
     </div>
+    
     <hr>
     <div class="cart-container">
         <ul id="cart-items"></ul>
     </div>
-    <button id="checkout-button" class="checkout-button"><a href="Billing.html">Proceed to Billing</a></button>
+    <button id="checkout-button" class="checkout-button" style="color: white;"><a href="Billing.html">Proceed to Billing</a></button>
 
 
     <script>
+        
         // Load cart from local storage
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -91,11 +165,42 @@
                 location.reload(); 
             });
         });
+// Calculate total price
+function calculateTotalPrice() {
+    let totalPrice = 0;
+    cart.forEach(item => {
+        totalPrice += item.price;
+    });
+    return totalPrice.toFixed(2);
+}
+// Display "No item in cart" message if cart is empty
+if (cart.length === 0) {
+    const noItemMessage = document.createElement('div');
+    noItemMessage.innerHTML = 'No item in cart ';
+    noItemMessage.classList.add('no-item-message');
+    document.body.appendChild(noItemMessage);
+} else {
+    const noItemMessage = document.querySelector('.no-item-message');
+    if (noItemMessage) {
+        noItemMessage.remove();
+    }
+}
 
-        // Show checkout button if cart is not empty
-        if (cart.length > 0) {
-            document.getElementById('checkout-button').style.display = 'block';
-        }
+// Display total price
+const totalElement = document.createElement('div');
+totalElement.innerHTML = `Total: $${calculateTotalPrice()}`;
+totalElement.classList.add('total-price');
+document.body.appendChild(totalElement);
+
+// Show checkout button if cart is not empty
+if (cart.length > 0) {
+    document.getElementById('checkout-button').style.display = 'block';
+} else {
+    document.getElementById('checkout-button').style.display = 'none';
+}
+
+       
+        
     </script>
 
 <hr>

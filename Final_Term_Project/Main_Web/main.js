@@ -1,3 +1,5 @@
+
+
 let search = document.querySelector('.search-box');
     let menuIcon = document.getElementById('menu-icon');
     let navbar = document.querySelector('ul.navbar');
@@ -15,6 +17,29 @@ let search = document.querySelector('.search-box');
     window.addEventListener('scroll', () => {
         header.classList.toggle('shadow', window.scrollY > 0);
     })
+
+// Search functionality
+document.querySelector('.search-box input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        const searchTerm = this.value.trim().toLowerCase(); // Convert search term to lowercase
+
+        // Find the box with matching data-name
+        const box = Array.from(document.querySelectorAll('.box')).find(box => {
+            return box.getAttribute('data-name').toLowerCase().includes(searchTerm);
+        });
+
+        if (box) {
+            // Scroll to the box
+            box.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            alert('Item not found!');
+        }
+
+        // Clear the search input
+        this.value = '';
+    }
+});
+
 
 
 // Cart functionality
