@@ -4,70 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billing</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
     <link rel="stylesheet" href="style.css">
     <!-- box icon -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1:hover,
+h1 a:hover {
+    color: rgb(0, 155, 216);
+}
+a:hover,
+a:hover i {
+    color: rgb(0, 155, 216);
+}
+
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+.Copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+            .cart-container {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cart-item button {
+                margin-top: 10px;
+            }
+
+            .checkout-button {
+                padding: 10px;
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .footer {
+                flex-direction: column;
+            }
+
+            .footer-box {
+                margin-bottom: 20px;
+            }
+
+            .footer-box h2,
+            .footer-box h3 {
+                text-align: center;
+            }
+
+            .footer-box .social {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-box .Contact {
+                text-align: center;
+            }
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/9fb26d8eab.js" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: rgba(203, 243, 243, 0.877);">
-    <div style="display: flex; justify-content: space-between;">
-        <h1 style="text-align: center;" class="animate__animated animate__fadeInLeft">Billing</h1>
-        <h1 style="text-align: right;"><a href="index.html" class="animate__animated animate__fadeInLeft">Go back</a></h1>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+            <h1 style="text-align: left; margin: 0;">Checkout</h1>
+            <h1 style="margin-left: 10px;"><i class="fa-regular fa-credit-card"></i></h1>
+        </div>
+        <h1 style="text-align: right; margin: 0;"><a href="index.html" style="text-decoration: none;">Back <i
+                    class="fa-solid fa-right-from-bracket"></i></a></h1>
     </div>
     <hr>
-    <form id="billing-form">
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
-        <button type="submit">Continue</button>
-    </form>
-
-    <script>
-        document.getElementById('billing-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-
-            // Get form values
-            const firstName = document.getElementById('first-name').value;
-            const lastName = document.getElementById('last-name').value;
-            const address = document.getElementById('address').value;
-
-            // Display message
-            alert(`Your order has been placed.\n\nFirst Name: ${firstName}\nLast Name: ${lastName}\nAddress: ${address}`);
-        });
-    </script>
-    <hr>
+    <div class="container">
+        
+        <form id="billing-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Continue</button>
+        </form>
+        <hr>
+    </div>
+<hr>
     <section class="footer">
         <div class="footer-box">
             <h2>Ifterious Tech</h2>
@@ -108,11 +189,19 @@
         </div>
     
     </section>
-    
-    
-        <!-- Copyright -->
-        <div class="Copyright">
-            <P>&#169;  Ifterious All Right Reserved</P>
-        </div>
+
+    <div class="Copyright">
+        <p>&#169; Ifterious All Right Reserved</p>
+    </div>
+
+    <script>
+        document.getElementById('billing-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const address = document.getElementById('address').value;
+            alert(`Your order has been placed.\n\nFirst Name: ${firstName}\nLast Name: ${lastName}\nAddress: ${address}`);
+        });
+    </script>
 </body>
 </html>

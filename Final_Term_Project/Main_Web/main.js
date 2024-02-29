@@ -1,4 +1,21 @@
+let cartItemsCount = localStorage.getItem('cartItemsCount') ? parseInt(localStorage.getItem('cartItemsCount')) : 0;
 
+// Function to update cart items count
+function updateCartItemsCount() {
+    document.getElementById("cart-items-count").innerText = cartItemsCount.toString();
+}
+
+// Update cart items count on page load
+updateCartItemsCount();
+
+// Example: Increment cart items count
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+        cartItemsCount++;
+        localStorage.setItem('cartItemsCount', cartItemsCount.toString());
+        updateCartItemsCount();
+    });
+});
 
 let search = document.querySelector('.search-box');
     let menuIcon = document.getElementById('menu-icon');

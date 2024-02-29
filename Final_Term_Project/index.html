@@ -11,9 +11,48 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Ifterious | Login</title>
+<style>
+    body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Prevent scrollbars */
+            font-family: Arial, sans-serif;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+</style>
 </head>
 
 <body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="2022 Nitro 5 ｜ Gaming Laptop ｜ Acer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="box">
         <div class="container">
             <div class="top-header">

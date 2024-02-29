@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link rel="icon" href="bq-final-project-images--main/logo.png"
-        type="image/x-icon" />
+    <link rel="icon" href="bq-final-project-images--main/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <!-- box icon -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
+        
+        h1:hover,
+h1 a:hover {
+    color: rgb(0, 155, 216);
+}
+a:hover,
+a:hover i {
+    color: rgb(0, 155, 216);
+}
+
         .cart-container {
             max-width: 600px;
             margin: 0 auto;
@@ -43,216 +50,237 @@
         }
 
         .checkout-button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.checkout-button a {
-    color: white;
-}
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .checkout-button a {
+            color: white;
+        }
 
 
-.checkout-button:hover {
-    background-color: #45a049;
-}
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
 
         .total-price {
-            
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
-    color: #333;
-}
-.no-item-message {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
-    color: #333;
+            background-color: #79777788;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        .total-price:hover {
+    color: rgb(0, 0, 0);
 }
 
-@media only screen and (max-width: 600px) {
-    .cart-container {
-        max-width: 100%;
-        padding: 0 10px;
-    }
+        .no-item-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
 
-    .cart-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        .no-item-message:hover {
+            color: #ffffff;
+        }
+        @media only screen and (max-width: 600px) {
+            .cart-container {
+                max-width: 100%;
+                padding: 0 10px;
+            }
 
-    .cart-item button {
-        margin-top: 10px;
-    }
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    .checkout-button {
-        padding: 10px;
-        margin-top: 20px;
-        width: 100%;
-    }
+            .cart-item button {
+                margin-top: 10px;
+            }
 
-    .footer {
-        flex-direction: column;
-    }
+            .checkout-button {
+                padding: 10px;
+                margin-top: 20px;
+                width: 100%;
+            }
 
-    .footer-box {
-        margin-bottom: 20px;
-    }
+            .footer {
+                flex-direction: column;
+            }
 
-    .footer-box h2,
-    .footer-box h3 {
-        text-align: center;
-    }
+            .footer-box {
+                margin-bottom: 20px;
+            }
 
-    .footer-box .social {
-        display: flex;
-        justify-content: center;
-    }
+            .footer-box h2,
+            .footer-box h3 {
+                text-align: center;
+            }
 
-    .footer-box .Contact {
-        text-align: center;
-    }
-}
+            .footer-box .social {
+                display: flex;
+                justify-content: center;
+            }
 
+            .footer-box .Contact {
+                text-align: center;
+            }
+        }
+        
 
     </style>
     <script src="https://kit.fontawesome.com/9fb26d8eab.js" crossorigin="anonymous"></script>
 </head>
+
 <body style="background-color: rgba(203, 243, 243, 0.877);">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="display: flex; align-items: center;">
-            <h1 style="text-align: left; margin: 0;">Cart</h1>
-            <h1 style="margin-left: 10px;"><i class='bx bx-cart'></i></h1>
-        </div>
-        <h1 style="text-align: right; margin: 0;"><a href="index.html">Back <i class="fa-solid fa-right-from-bracket"></i></a></h1>
+    <div style="display: flex; align-items: center;">
+        <h1 style="text-align: left; margin: 0;">Cart</h1>
+        <h1 style="margin-left: 10px;"><i class='bx bx-cart'></i></h1>
     </div>
+    <h1 style="text-align: right; margin: 0;"><a href="index.html" style="text-decoration: none;">Back <i
+                class="fa-solid fa-right-from-bracket"></i></a></h1>
+</div>
+
     
+
     <hr>
     <div class="cart-container">
         <ul id="cart-items"></ul>
     </div>
-    <button id="checkout-button" class="checkout-button" style="color: white;"><a href="Billing.html">Proceed to Billing</a></button>
+    <button id="checkout-button" class="checkout-button" style="color: white;"><a href="Billing.html">Proceed to
+            Billing</a></button>
 
 
-    <script>
-        
-        // Load cart from local storage
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            <script>
+                // Load cart from local storage
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+                // Display cart items
+                const cartItemsElement = document.getElementById('cart-items');
+                cart.forEach((item, index) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <div class="cart-item">
+                            <span>${item.name} - $${item.price.toFixed(2)}</span>
+                            <button class="remove-from-cart" data-index="${index}">Remove</button>
+                        </div>`;
+                    cartItemsElement.appendChild(li);
+                });
+            
+                // Remove item from cart and update cart items count
+                document.querySelectorAll('.remove-from-cart').forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        localStorage.setItem('cartItemsCount', cart.length.toString()); // Update cart items count
+                        location.reload();
+                    });
+                });
+            
+                // Calculate total price and display it
+                function calculateTotalPrice() {
+                    let totalPrice = 0;
+                    cart.forEach(item => {
+                        totalPrice += item.price;
+                    });
+                    return totalPrice.toFixed(2);
+                }
+            
+                // Display "No item in cart" message if cart is empty
+                if (cart.length === 0) {
+                    const noItemMessage = document.createElement('div');
+                    noItemMessage.innerHTML = 'No item in cart  <i class="bx bx-cart"></i> ';
+                    noItemMessage.classList.add('no-item-message');
+                    noItemMessage.style.display = 'flex';
+                    noItemMessage.style.alignItems = 'center';
+                    noItemMessage.style.justifyContent = 'center';
+                    document.body.appendChild(noItemMessage);
+                } else {
+                    const noItemMessage = document.querySelector('.no-item-message');
+                    if (noItemMessage) {
+                        noItemMessage.remove();
+                    }
+                }
+            
+                // Display total price
+                const totalElement = document.createElement('div');
+                totalElement.innerHTML = `Total: $${calculateTotalPrice()}`;
+                totalElement.classList.add('total-price');
+                document.body.appendChild(totalElement);
+            
+                // Show checkout button if cart is not empty
+                if (cart.length > 0) {
+                    document.getElementById('checkout-button').style.display = 'block';
+                } else {
+                    document.getElementById('checkout-button').style.display = 'none';
+                }
+            </script>
+            
 
-        // Display cart items
-        const cartItemsElement = document.getElementById('cart-items');
-        cart.forEach((item, index) => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <div class="cart-item">
-                    <span>${item.name} - $${item.price.toFixed(2)}</span>
-                    <button class="remove-from-cart" data-index="${index}">Remove</button>
-                </div>`;
-            cartItemsElement.appendChild(li);
-        });
-
-        // Remove item from cart
-        document.querySelectorAll('.remove-from-cart').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const index = parseInt(this.getAttribute('data-index'));
-                cart.splice(index, 1);
-                localStorage.setItem('cart', JSON.stringify(cart));
-                location.reload(); 
-            });
-        });
-// Calculate total price
-function calculateTotalPrice() {
-    let totalPrice = 0;
-    cart.forEach(item => {
-        totalPrice += item.price;
-    });
-    return totalPrice.toFixed(2);
-}
-// Display "No item in cart" message if cart is empty
-if (cart.length === 0) {
-    const noItemMessage = document.createElement('div');
-    noItemMessage.innerHTML = 'No item in cart ';
-    noItemMessage.classList.add('no-item-message');
-    document.body.appendChild(noItemMessage);
-} else {
-    const noItemMessage = document.querySelector('.no-item-message');
-    if (noItemMessage) {
-        noItemMessage.remove();
-    }
-}
-
-// Display total price
-const totalElement = document.createElement('div');
-totalElement.innerHTML = `Total: $${calculateTotalPrice()}`;
-totalElement.classList.add('total-price');
-document.body.appendChild(totalElement);
-
-// Show checkout button if cart is not empty
-if (cart.length > 0) {
-    document.getElementById('checkout-button').style.display = 'block';
-} else {
-    document.getElementById('checkout-button').style.display = 'none';
-}
-
-       
-        
-    </script>
-
-<hr>
-<section class="footer">
-    <div class="footer-box">
-        <h2>Ifterious Tech</h2>
-        <P>Explore a world of innovation with our curated selection of top-notch gadgets, from sleek smartphones to powerful gaming rigs. Our commitment to quality, impeccable customer service, and lightning-fast delivery make us your go-to tech hub. Elevate your digital lifestyle with Ifterious Tech—where technology meets excellence. </P>
-        <div class="social">
-            <a href="https://www.youtube.com/@iftantarylive7083"><i class='bx bxl-facebook-circle' ></i></a>
-            <a href="https://twitter.com/Ifterious"><i class='bx bxl-twitter' ></i></a>
-            <a href="https://www.instagram.com/iftantary/"><i class='bx bxl-instagram' ></i></a>
-            <a href="https://www.tiktok.com/@mortalgaming163?lang=en"><i class='bx bxl-tiktok' ></i></a>
+    <hr>
+    <section class="footer">
+        <div class="footer-box">
+            <h2>Ifterious Tech</h2>
+            <P>Explore a world of innovation with our curated selection of top-notch gadgets, from sleek smartphones to
+                powerful gaming rigs. Our commitment to quality, impeccable customer service, and lightning-fast
+                delivery make us your go-to tech hub. Elevate your digital lifestyle with Ifterious Tech—where
+                technology meets excellence. </P>
+            <div class="social">
+                <a href="https://www.youtube.com/@iftantarylive7083"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/Ifterious"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/iftantary/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.tiktok.com/@mortalgaming163?lang=en"><i class='bx bxl-tiktok'></i></a>
+            </div>
         </div>
-    </div>
-    <div class="footer-box">
-        <h3>Support</h3>
-        <li><a href="#">products</a></li>
-        <li><a href="#">Help & Support</a></li>  
-        <li><a href="#">Return policy</a></li>
-        <li><a href="#">Terms of use</a></li>
-        <li><a href="#">products</a></li>
-    </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <li><a href="#">products</a></li>
+            <li><a href="#">Help & Support</a></li>
+            <li><a href="#">Return policy</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">products</a></li>
+        </div>
 
-    <div class="footer-box">
-        <h3>Support</h3>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Blog Post</a></li>
-        <li><a href="#">Our Branches</a></li>   
-    </div>
-    
-    <div class="footer-box">
-        <h3>Contact</h3>
-        <div class="Contact">
-            <span><i class='bx bxs-map'></i>MAJU Bus Stop, Main Shahrah-e-Faisal, 22-E, Block-6, PECHS, Karachi-75400</span>
-            <br>
-            <span><i class='bx bxs-phone'></i>+92-3161611907</span>
-            <br>
-            <span><i class='bx bxs-envelope'></i>ifham.khan105@gmail.com</span>
-         </div>
-    </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog Post</a></li>
+            <li><a href="#">Our Branches</a></li>
+        </div>
 
-</section>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <div class="Contact">
+                <span><i class='bx bxs-map'></i>MAJU Bus Stop, Main Shahrah-e-Faisal, 22-E, Block-6, PECHS,
+                    Karachi-75400</span>
+                <br>
+                <span><i class='bx bxs-phone'></i>+92-3161611907</span>
+                <br>
+                <span><i class='bx bxs-envelope'></i>ifham.khan105@gmail.com</span>
+            </div>
+        </div>
+
+    </section>
 
 
     <!-- Copyright -->
     <div class="Copyright">
-        <P>&#169;  Ifterious All Right Reserved</P>
+        <P>&#169; Ifterious All Right Reserved</P>
     </div>
 
     <!-- link to js  -->
     <script src="main.js"></script>
 </body>
-</html>
 
+</html>

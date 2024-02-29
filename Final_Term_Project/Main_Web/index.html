@@ -31,6 +31,14 @@
 .add-to-cart:hover {
     background-color: #45a049; 
 }
+#cart-items-count {
+    display: inline-block;
+    background-color: #ff0000; /* Example background color */
+    color: #ffffff; /* Example text color */
+    font-size: 12px; /* Example font size */
+    padding: 0 5px; /* Example padding */
+    border-radius: 50%; /* Example border radius for a circular count */
+}
 
   </style>
 </head>
@@ -54,10 +62,14 @@
     </ul>
 
     <!-- Icons -->
-    <div class="header-icon">
-        <a href="Cart.html"><i class='bx bx-cart'></i></a>
-        <i class='bx bx-search' id="search-icon"></i>
-    </div>
+<div class="header-icon">
+    <a href="Cart.html" class="cart-icon">
+        <i class='bx bx-cart'></i>
+        <span id="cart-items-count">0</span>
+    </a>
+    <i class='bx bx-search' id="search-icon"></i>
+</div>
+
 
     <!-- search box -->
     <div class="search-box">
